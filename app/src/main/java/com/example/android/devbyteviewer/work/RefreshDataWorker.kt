@@ -8,6 +8,11 @@ import com.example.android.devbyteviewer.repository.VideosRepository
 import timber.log.Timber
 
 class RefreshDataWorker(appContext: Context, params: WorkerParameters) :CoroutineWorker(appContext = appContext, params = params) {
+
+    companion object {
+        const val WORK_NAME = "com.example.android.devbyteviewer.work.RefreshDataWorker"
+    }
+
     /**
      * A suspending method to do your work.  This function runs on the coroutine context specified
      * by [coroutineContext].
